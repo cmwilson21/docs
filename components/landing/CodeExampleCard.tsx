@@ -23,16 +23,18 @@ export const CodeExampleCard = ({ example }: Props) => {
           {example.tags.map((tag) => {
             // start if statement here. if label equals one of the tags, bg: 'somecolor.emphasis"
             // make a new label return per tag
-            //
+
+            //  **!! currently no rhyme or reason for the colors chosen. can better match color with category?
 
             // console.log(tag)
 
+            // Bugs ____________
             // (Fixed) Bug - CodeQL is showing multiple times in the same card, once with the correct color assigned, once with the previous default color.
             // Possible solutions?
             // - Restart the local server?
             //  ^^ Fixed it!
 
-            // Current Bug - Need more color options for the Organization and Scripts color codes. Only 7 colors available and 9 labels in this one
+            // **!! Current Bug - Need more color options for the Organization and Scripts color codes. Only 7 colors available and 9 labels in this one
 
             if (tag === 'CodeQL') {
               return (
