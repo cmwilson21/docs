@@ -26,6 +26,11 @@ export const CodeExampleCard = ({ example }: Props) => {
             //
 
             // console.log(tag)
+
+            // CURRENTLY!!! CodeQL is showing multiple times in the same card, once with the correct color assigned, once with the previous default color.
+            // Possible solutions?
+            // - Restart the local server?
+
             if (tag === 'CodeQL') {
               return (
                 <Label key={tag} variant="small" sx={{ bg: 'success.emphasis', mb: 1, mr: 2 }}>
