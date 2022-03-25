@@ -21,11 +21,72 @@ export const CodeExampleCard = ({ example }: Props) => {
         />
         <div className="d-flex flex-wrap">
           {example.tags.map((tag) => {
-            return (
-              <Label key={tag} variant="small" sx={{ bg: 'accent.emphasis', mb: 1, mr: 2 }}>
-                {tag}
-              </Label>
-            )
+            // start if statement here. if label equals one of the tags, bg: 'somecolor.emphasis"
+            // make a new label return per tag
+            //
+
+            // console.log(tag)
+            if (tag === 'CodeQL') {
+              return (
+                <Label key={tag} variant="small" sx={{ bg: 'success.emphasis', mb: 1, mr: 2 }}>
+                  {tag}
+                </Label>
+              )
+            } else if (tag === 'Code scanning') {
+              return (
+                <Label key={tag} variant="small" sx={{ bg: 'attention.emphasis', mb: 1, mr: 2 }}>
+                  {tag}
+                </Label>
+              )
+            } else if (tag === 'GitHub Actions') {
+              return (
+                <Label key={tag} variant="small" sx={{ bg: 'sponsors.emphasis', mb: 1, mr: 2 }}>
+                  {tag}
+                </Label>
+              )
+            } else if (tag === 'Security policy') {
+              return (
+                <Label key={tag} variant="small" sx={{ bg: 'accent.emphasis', mb: 1, mr: 2 }}>
+                  {tag}
+                </Label>
+              )
+            } else if (tag === 'Security advisory') {
+              return (
+                <Label key={tag} variant="small" sx={{ bg: 'danger.emphasis', mb: 1, mr: 2 }}>
+                  {tag}
+                </Label>
+              )
+            } else if (tag === 'Dependabot') {
+              return (
+                <Label key={tag} variant="small" sx={{ bg: 'attention.emphasis', mb: 1, mr: 2 }}>
+                  {tag}
+                </Label>
+              )
+            } else if (tag === 'Alerts') {
+              return (
+                <Label key={tag} variant="small" sx={{ bg: 'severe.emphasis', mb: 1, mr: 2 }}>
+                  {tag}
+                </Label>
+              )
+            } else if (tag === 'Security updates') {
+              return (
+                <Label key={tag} variant="small" sx={{ bg: 'done.emphasis', mb: 1, mr: 2 }}>
+                  {tag}
+                </Label>
+              )
+            } else if (tag === 'Organization') {
+              return (
+                <Label key={tag} variant="small" sx={{ bg: 'primary.emphasis', mb: 1, mr: 2 }}>
+                  {tag}
+                </Label>
+              )
+            } else if (tag === 'Scripts') {
+              return (
+                <Label key={tag} variant="small" sx={{ bg: 'secondary.emphasis', mb: 1, mr: 2 }}>
+                  {tag}
+                </Label>
+              )
+            } else return null
           })}
         </div>
       </div>
