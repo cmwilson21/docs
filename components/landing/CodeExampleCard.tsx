@@ -27,9 +27,12 @@ export const CodeExampleCard = ({ example }: Props) => {
 
             // console.log(tag)
 
-            // CURRENTLY!!! CodeQL is showing multiple times in the same card, once with the correct color assigned, once with the previous default color.
+            // (Fixed) Bug - CodeQL is showing multiple times in the same card, once with the correct color assigned, once with the previous default color.
             // Possible solutions?
             // - Restart the local server?
+            //  ^^ Fixed it!
+
+            // Current Bug - Need more color options for the Organization and Scripts color codes. Only 7 colors available and 9 labels in this one
 
             if (tag === 'CodeQL') {
               return (
@@ -81,13 +84,15 @@ export const CodeExampleCard = ({ example }: Props) => {
               )
             } else if (tag === 'Organization') {
               return (
-                <Label key={tag} variant="small" sx={{ bg: 'primary.emphasis', mb: 1, mr: 2 }}>
+                <Label key={tag} variant="small" sx={{ bg: 'sponsors.emphasis', mb: 1, mr: 2 }}>
+                  {/* the above bg: color is a repeat as there are no more colors to use on primer */}
                   {tag}
                 </Label>
               )
             } else if (tag === 'Scripts') {
               return (
-                <Label key={tag} variant="small" sx={{ bg: 'secondary.emphasis', mb: 1, mr: 2 }}>
+                <Label key={tag} variant="small" sx={{ bg: 'accent.emphasis', mb: 1, mr: 2 }}>
+                  {/* the above bg: color is a repeat as there are no more colors to use on primer */}
                   {tag}
                 </Label>
               )
