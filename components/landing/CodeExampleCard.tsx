@@ -24,8 +24,6 @@ export const CodeExampleCard = ({ example }: Props) => {
             // start if statement here. if label equals one of the tags, bg: 'somecolor.emphasis"
             // make a new label return per tag
 
-            //  **!! currently no rhyme or reason for the colors chosen. can better match color with category?
-
             // console.log(tag)
 
             // Bugs ____________
@@ -33,8 +31,10 @@ export const CodeExampleCard = ({ example }: Props) => {
             // Possible solutions?
             // - Restart the local server?
             //  ^^ Fixed it!
+            // Need more color options for the Organization and Scripts color codes. Only 7 colors available and 9 labels in this one
+            // added more colors from an accessibility site - http://web-accessibility.carnegiemuseums.org/design/color/
 
-            // **!! Current Bug - Need more color options for the Organization and Scripts color codes. Only 7 colors available and 9 labels in this one
+            // **!! Current Bug - none
 
             if (tag === 'CodeQL') {
               return (
@@ -86,27 +86,23 @@ export const CodeExampleCard = ({ example }: Props) => {
               )
             } else if (tag === 'Organization') {
               return (
-                // <Label key={tag} variant="small" sx={{ bg: 'sponsors.emphasis', mb: 1, mr: 2 }}>
                 <Label
                   key={tag}
                   variant="small"
                   sx={{ mb: 1, mr: 2 }}
                   style={{ backgroundColor: '#5b616b' }}
                 >
-                  {/* the above bg: color is a repeat as there are no more colors to use on primer */}
                   {tag}
                 </Label>
               )
             } else if (tag === 'Scripts') {
               return (
-                // <Label key={tag} variant="small" sx={{ bg: 'accent.emphasis', mb: 1, mr: 2 }}>
                 <Label
                   key={tag}
                   variant="small"
                   sx={{ mb: 1, mr: 2 }}
                   style={{ backgroundColor: '#046b99' }}
                 >
-                  {/* the above bg: color is a repeat as there are no more colors to use on primer */}
                   {tag}
                 </Label>
               )
