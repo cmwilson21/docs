@@ -86,14 +86,26 @@ export const CodeExampleCard = ({ example }: Props) => {
               )
             } else if (tag === 'Organization') {
               return (
-                <Label key={tag} variant="small" sx={{ bg: 'sponsors.emphasis', mb: 1, mr: 2 }}>
+                // <Label key={tag} variant="small" sx={{ bg: 'sponsors.emphasis', mb: 1, mr: 2 }}>
+                <Label
+                  key={tag}
+                  variant="small"
+                  sx={{ mb: 1, mr: 2 }}
+                  style={{ backgroundColor: '#5b616b' }}
+                >
                   {/* the above bg: color is a repeat as there are no more colors to use on primer */}
                   {tag}
                 </Label>
               )
             } else if (tag === 'Scripts') {
               return (
-                <Label key={tag} variant="small" sx={{ bg: 'accent.emphasis', mb: 1, mr: 2 }}>
+                // <Label key={tag} variant="small" sx={{ bg: 'accent.emphasis', mb: 1, mr: 2 }}>
+                <Label
+                  key={tag}
+                  variant="small"
+                  sx={{ mb: 1, mr: 2 }}
+                  style={{ backgroundColor: '#046b99' }}
+                >
                   {/* the above bg: color is a repeat as there are no more colors to use on primer */}
                   {tag}
                 </Label>
